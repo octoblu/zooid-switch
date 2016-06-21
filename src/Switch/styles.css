@@ -1,0 +1,16 @@
+.root {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+}
+
+.checkbox {
+  opacity: 0;
+}
+
+.is-disabled {
+  cursor: default;
+}
+
+.is-on {}

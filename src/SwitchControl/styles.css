@@ -1,0 +1,59 @@
+.control {
+  width: 36px;
+  height: 24px;
+  margin-right: 8px
+}
+
+.bar {
+  position: relative;
+  top: 6px;
+  left: 0;
+
+  display: block;
+
+  border-radius: 6px;
+  height: 12px;
+  width: 100%;
+
+  background: rgba(0, 0, 0, 0.38);
+
+  transition: all 0.4s linear;
+  transition-property: -webkit-transform,background-color;
+  transition-property: transform,background-color;
+}
+
+.is-on .bar {
+  background: rgba(20, 86, 143, 0.50);
+}
+
+.is-disabled .bar {
+  background: rgba(0, 0, 0, 0.12);
+}
+
+.thumb {
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: 8px;
+
+  width: 20px;
+  height: 20px;
+
+  border-radius: 50%;
+
+  background: #FAFAFA;
+
+  box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px;
+
+  transition: all 0.3s linear;
+  transition-property: background-color;
+  transition-property: background-color;
+}
+
+.is-on .thumb {
+  background-color: #14568F;
+}
+
+.is-disabled .thumb {
+  background: #BDBDBD;
+}
