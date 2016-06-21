@@ -1,6 +1,6 @@
 {
   "name": "zooid-switch",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Switch",
   "main": "dist/bundle.js",
   "scripts": {
@@ -14,6 +14,7 @@
     "lint:css": "stylelint ./src/**/*.css",
     "lint:css:fix": "stylefmt ./src/**/*.css",
     "build": "webpack",
+    "build:storybook": "build-storybook -o storybook-build-dir",
     "test": "nyc --require babel-core/register --require babel-polyfill mocha",
     "test:watch": "mocha -w -R mocha-multi --reporter-options spec=-,mocha-osx-reporter=-"
   },
@@ -59,7 +60,7 @@
     "enzyme": "^2.3.0",
     "eslint": "^2.8.0",
     "eslint-config-airbnb": "^9.0.1",
-    "eslint-plugin-babel": "^3.2.0",
+    "eslint-plugin-babel": "^3.3.0",
     "eslint-plugin-import": "^1.6.0",
     "eslint-plugin-jsx-a11y": "^1.0.3",
     "eslint-plugin-react": "^5.0.1",
