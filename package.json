@@ -1,6 +1,6 @@
 {
   "name": "zooid-switch",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Switch",
   "main": "dist/bundle.js",
   "scripts": {
@@ -45,7 +45,7 @@
   },
   "devDependencies": {
     "@kadira/react-storybook-addon-info": "^3.0.4",
-    "@kadira/storybook": "^1.28.1",
+    "@kadira/storybook": "^1.32.0",
     "babel-cli": "^6.7.7",
     "babel-core": "^6.7.7",
     "babel-loader": "^6.2.4",
