@@ -6,7 +6,7 @@ module.exports = {
       {
         test: /\.css?$/,
         loader: 'style-loader!css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader',
-        include: path.resolve(__dirname, '../', 'src')
+        include: [path.resolve(__dirname, '../', 'src'), path.resolve(__dirname, '../', 'stories')]
       }
     ]
   }

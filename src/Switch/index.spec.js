@@ -19,19 +19,6 @@ describe('<Switch />', () => {
       expect(sut).to.have.prop('on', false)
       expect(sut).to.have.state('on', false)
     })
-
-    it('should render a checkbox', () => {
-      const sut = shallow(<Switch />)
-      expect(sut).to.contain(
-        <input
-          type="checkbox"
-          checked={false}
-          onChange={noop}
-          disabled={false}
-          className={styles.checkbox}
-        />
-      )
-    })
   })
 
   describe('when given an onChange callback as a prop', () => {
@@ -58,6 +45,13 @@ describe('<Switch />', () => {
     })
   })
 
+  describe('when given alignLabel as a prop', () => {
+    it('should render the label in the correct location', () => {
+      const sut = shallow(<Switch label="cats4ever" alignLabel="right" />)
+      expect(sut).to.have.className(styles['alignLabel-right'])
+    })
+  })
+
   describe('when disabled prop is truthy', () => {
     let sut
 
@@ -66,7 +60,7 @@ describe('<Switch />', () => {
     })
 
     it('should render a disabled switch', () => {
-      expect(sut).to.have.className(styles.disabled)
+      expect(sut).to.have.className(styles['is-disabled'])
     })
 
     describe('when you click on a switch', () => {
@@ -103,12 +97,11 @@ describe('<Switch />', () => {
     })
   })
 
-  describe('when given a on prop that is truthy', () => {
+  describe('when given an on prop that is truthy', () => {
     it('should render the switch in the correct state', () => {
       const sut = mount(<Switch on />)
       expect(sut).to.have.prop('on', true)
       expect(sut).to.have.className(styles['is-on'])
-      expect(sut.find('input[type="checkbox"]')).to.be.checked()
     })
   })
 
@@ -117,7 +110,6 @@ describe('<Switch />', () => {
       const sut = mount(<Switch />)
       expect(sut).to.have.prop('on', false)
       expect(sut).to.not.have.className(styles['is-on'])
-      expect(sut.find('input[type="checkbox"]')).to.not.be.checked()
     })
   })
 })

@@ -7,6 +7,7 @@ import SwitchControl from '../SwitchControl'
 import styles from './styles.css'
 
 const propTypes = {
+  alignLabel: PropTypes.oneOf(['left', 'right']),
   className: PropTypes.string,
   disabled: PropTypes.bool,
   label: PropTypes.string,
@@ -15,6 +16,7 @@ const propTypes = {
 }
 
 const defaultProps = {
+  alignLabel: 'left',
   disabled: false,
   label: '',
   onChange: noop,
@@ -39,13 +41,14 @@ class Switch extends React.Component {
   }
 
   render() {
-    const { className, disabled, label, onChange } = this.props
+    const { alignLabel, className, disabled, label, onChange } = this.props
     const { on } = this.state
 
     const classes = classNames(
       styles.root,
       { [`${styles['is-on']}`]: on },
       { [`${styles['is-disabled']}`]: disabled },
+      styles[`alignLabel-${alignLabel}`],
       className
     )
 
@@ -53,15 +56,8 @@ class Switch extends React.Component {
 
     return (
       <div className={classes} onClick={this.handleClick}>
-        <SwitchControl on={on} disabled={disabled} />
         <label>{label}</label>
-        <input
-          onChange={noop}
-          type="checkbox"
-          checked={on}
-          disabled={disabled}
-          className={styles.checkbox}
-        />
+        <SwitchControl on={on} disabled={disabled} />
       </div>
     )
   }
