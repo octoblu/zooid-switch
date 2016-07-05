@@ -5,7 +5,8 @@ import styles from './styles.css'
 import Switch from '../src'
 
 storiesOf('Switch', module)
-  .addWithInfo('Simple. No Props? No Problems.', 'This is the switch with no props passed in', () => (
+  .addWithInfo('Simple. No Props? No Problems.',
+  'This is the switch with no props passed in', () => (
     <div className={styles.Page}>
       <Switch label="Simple" />
     </div>

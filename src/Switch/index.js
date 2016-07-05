@@ -34,14 +34,14 @@ class Switch extends React.Component {
 
   handleClick = () => {
     this.setState({
-      on: !this.state.on
+      on: !this.state.on,
     }, () => {
       this.props.onChange(this.state.on)
     })
   }
 
   render() {
-    const { alignLabel, className, disabled, label, onChange } = this.props
+    const { alignLabel, className, disabled, label } = this.props
     const { on } = this.state
 
     const classes = classNames(
