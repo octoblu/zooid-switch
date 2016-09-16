@@ -2,9 +2,13 @@
 A React component to render Zooid like switches/toggles.
 
 [![Build Status](https://travis-ci.org/octoblu/zooid-switch.svg?branch=master)](https://travis-ci.org/octoblu/zooid-switch)
-[![npm version](https://badge.fury.io/js/zooid-switch.svg)](http://badge.fury.io/js/zooid-switch)
-[![Code Climate](https://codeclimate.com/github/octoblu/zooid-switch.png)](https://codeclimate.com/github/octoblu/zooid-switch)
+[![Test Coverage](https://codecov.io/gh/octoblu/zooid-switch/branch/master/graph/badge.svg)](https://codecov.io/gh/octoblu/zooid-switch)
+[![Dependency status](http://img.shields.io/david/octoblu/zooid-switch.svg?style=flat)](https://david-dm.org/octoblu/zooid-switch)
+[![devDependency Status](http://img.shields.io/david/dev/octoblu/zooid-switch.svg?style=flat)](https://david-dm.org/octoblu/zooid-switch#info=devDependencies)
 [![Slack Status](http://community-slack.octoblu.com/badge.svg)](http://community-slack.octoblu.com)
+
+[![NPM](https://nodei.co/npm/zooid-switch.svg?style=flat)](https://npmjs.org/package/zooid-switch)
+
 
 
 
